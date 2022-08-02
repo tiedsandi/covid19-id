@@ -1,0 +1,194 @@
+:root {
+    /* color */
+    --mainColor: #3538AC;
+    --secondaryColor: #646AE4;
+    --tertiaryColor: #1B215B;
+    --headerChartColor: #161C4E;
+    --chartColor: #EC4179;
+    --chartColor2: #69F0AE;
+    --fontColor: #E7E7E7;
+
+    --white: #E7E7E7;
+    --black: #464646;
+
+    /* font */
+    --fontSizeTitle: 4rem;
+    --fontSizeSubTitle: 2rem;
+    --fontSizeParagraph: 0.95rem;
+    --fontSizeButton: 0.95rem;
+    --fontSizeChart: 1rem
+}
+
+.App {
+    background-color: var(--mainColor);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    padding: 200px 100px;
+    color: var(--fontColor);
+    display: flex;
+}
+
+.Left {
+    flex: 1;
+
+    // Text Section
+    .TextSection {
+        position: relative;
+        z-index: 1;
+
+        .virus1 {
+            position: absolute;
+            z-index: -1;
+            left: -5rem;
+            top: -8rem;
+        }
+
+        .virus2 {
+            position: absolute;
+            z-index: -1;
+            right: -2rem;
+            bottom: 0rem;
+        }
+
+        .Title {
+            font-size: var(--fontSizeTitle);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .Subtitle {
+            font-size: var(--fontSizeSubTitle);
+            font-weight: lighter;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.1rem;
+        }
+
+        .Text {
+            font-size: var(--fontSizeParagraph);
+            font-weight: lighter;
+            line-height: 1.5;
+            margin-bottom: 5rem;
+        }
+
+        .Button {
+            background-color: var(--white);
+            color: var(--black);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: var(--fontSizeButton);
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: var(--tertiaryColor);
+                color: var(--white);
+            }
+        }
+    }
+
+    // Chart Section
+    .ChartSection {
+        margin-top: 6rem;
+        width: 40rem;
+        height: 24rem;
+        position: relative;
+        background-image: url('../public/images/virusTop.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        .chart-box {
+            background: var(--tertiaryColor);
+            opacity: 0.8;
+            z-index: 1;
+
+            .header {
+                height: max-content;
+                display: flex;
+                padding: 0.5rem 0rem;
+                text-align: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+                background-color: var(--headerChartColor);
+            }
+        }
+    }
+}
+
+.Right {
+    flex: 1.5;
+
+    // Text Section
+    .PictureSection {
+        // overflow: hidden;
+        margin-top: -5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+
+        img {
+            color: var(--white);
+            transform-origin: 50% 50%;
+            transform: scale(1);
+            // transition: all 2s ease-in-out;
+            animation: shaking 5s ease-in-out infinite;
+        }
+    }
+
+    // Chart Section
+    .SliderSection {}
+}
+
+.loading {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chartLegend {
+    display: flex;
+    align-items: center;
+    font-size: var(--fontSizeChart);
+    color: var(--white);
+
+    .mark {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        padding: 0.4rem;
+        margin-right: 0.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        color: var(--black);
+
+    }
+}
+
+// Animation 
+@keyframes shaking {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
