@@ -47,8 +47,14 @@ const SwiperSlider = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="slide-item">
-                        <img src="./images/cucitangan.png" alt="" />
-                        <p>Cuci Tangan</p>
+                        <img src="./images/vitamins.png" alt="" />
+                        <p>Minum Vitamin</p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="slide-item">
+                        <img src="./images/healthy.png" alt="" />
+                        <p>Tingkatkan Imun</p>
                     </div>
                 </SwiperSlide>
             </Swiper>

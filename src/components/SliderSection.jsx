@@ -5,7 +5,6 @@ const SliderSection = () => {
         <div className='SliderSection'>
             <div className="title">Pencegahan</div>
             <SwiperSlider />
-
         </div >
     )
 }

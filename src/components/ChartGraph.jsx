@@ -4,19 +4,17 @@ const ChartGraph = ({ data }) => {
         series: [data.sembuh, data.dirawat, data.meninggal],
         labels: ["Sembuh", "Dirawat", "Meninggal"],
         colors: ["#6CDCA5", "#9094F1", "#EC4179"],
-        legend: {
-            show: true,
-            labels: {
-                useSeriesColors: true,
-                colors: ["#6CDCA5", "#9094F1", "#EC4179"],
-                fontWeight: "bold",
-            },
-        },
         stroke: {
             show: false,
             curve: "smooth",
         },
         legend: {
+            // show: true,
+            // labels: {
+            //     useSeriesColors: true,
+            //     colors: ["#6CDCA5", "#9094F1", "#EC4179"],
+            //     fontWeight: "bold",
+            // },
             // floating: true,
             formatter: (value, index) => {
                 // rumus persentase
